@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@IM — Web & Software · Texas, USA</title>
+<meta name="description" content="@IM이 제작한 웹사이트 모음. 비즈니스와 교회, 두 갈래의 작업물.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f8f3; --panel:#ffffff; --ink:#1b2a22; --muted:#5f6f65; --line:#e5ece2;
+  --green:#2f7d5f; --green2:#266a50; --blue:#2f5fa8; --blue2:#284f8c; --gold:#b9954c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;
+  min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;
+  background-image:radial-gradient(680px 440px at 88% -8%,rgba(47,125,95,.13),transparent 62%),
+                   radial-gradient(620px 460px at 2% 110%,rgba(47,95,168,.10),transparent 60%)}
+h1,h2,h3,.serif{font-family:'Fraunces',serif}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px;width:100%}
+
+/* header */
+header{padding:26px 0}
+.bar{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .mk{width:44px;height:44px;border-radius:13px;background:linear-gradient(140deg,var(--green),var(--green2));
+  display:grid;place-items:center;box-shadow:0 12px 26px -10px rgba(47,125,95,.55)}
+.brand .mk b{font-family:'Fraunces',serif;font-weight:700;font-size:1.18rem;color:#fff;letter-spacing:.5px}
+.brand .nm b{font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem}
+.brand .nm span{display:block;font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:1px}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:30px;padding:3px;background:var(--panel)}
+.lang button{border:none;background:transparent;color:var(--muted);font-family:'Hanken Grotesk',sans-serif;font-weight:700;
+  font-size:.78rem;padding:7px 13px;border-radius:24px;cursor:pointer;transition:.2s;letter-spacing:.3px}
+.lang button.on{background:var(--green);color:#fff}
+
+/* hero */
+main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:30px 0 50px}
+.hero{text-align:center;max-width:680px;margin:0 auto 52px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.72rem;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--green);background:var(--panel);border:1px solid var(--line);padding:8px 16px;border-radius:30px}
+.hero h1{font-size:clamp(2.3rem,5vw,3.7rem);line-height:1.06;font-weight:600;letter-spacing:-1.2px;margin:22px 0 16px}
+.hero h1 em{font-style:italic;color:var(--green)}
+.hero p{font-size:1.08rem;color:var(--muted);max-width:520px;margin:0 auto}
+
+/* doors */
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:920px;margin:0 auto}
+.door{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:26px;padding:40px 36px;
+  overflow:hidden;transition:.35s;display:flex;flex-direction:column;min-height:340px}
+.door::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--ac)}
+.door:hover{transform:translateY(-8px);box-shadow:0 40px 70px -34px rgba(27,42,34,.34);border-color:transparent}
+.door .ico{width:64px;height:64px;border-radius:18px;background:var(--acbg);color:var(--ac);display:grid;place-items:center;
+  margin-bottom:24px;transition:.35s}
+.door:hover .ico{background:var(--ac);color:#fff}
+.door .ico svg{width:32px;height:32px}
+.door .tag{font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--ac)}
+.door h2{font-size:2rem;font-weight:600;letter-spacing:-.6px;margin:8px 0 10px}
+.door p{color:var(--muted);font-size:.98rem;margin-bottom:18px}
+.door .feats{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:auto}
+.door .feats li{font-size:.76rem;font-weight:600;color:var(--muted);background:var(--acbg);padding:5px 12px;border-radius:20px}
+.door .foot{display:flex;align-items:center;justify-content:space-between;margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
+.door .count{font-size:.84rem;color:var(--muted);font-weight:600}
+.door .count b{color:var(--ink);font-family:'Fraunces',serif;font-size:1.05rem}
+.door .go{display:inline-flex;align-items:center;gap:8px;color:var(--ac);font-weight:700;font-size:.92rem}
+.door .go .ar{transition:.25s}
+.door:hover .go .ar{transform:translateX(4px)}
+.door.business{--ac:var(--blue);--ac2:var(--blue2);--acbg:#eaf0fa}
+.door.church{--ac:var(--green);--ac2:var(--green2);--acbg:#e7f2ec}
+
+/* strip */
+.strip{text-align:center;margin:50px auto 0;color:var(--muted);font-size:.86rem;font-weight:600;letter-spacing:.4px}
+.strip b{color:var(--green)}
+
+footer{padding:26px 0;border-top:1px solid var(--line);margin-top:10px}
+.frow{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:.84rem}
+
+@media(max-width:720px){
+  .doors{grid-template-columns:1fr}
+  .door{min-height:0}
+  main{padding:10px 0 40px}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="bar">
+    <a class="brand" href="#">
+      <span class="mk"><b>IM</b></span>
+      <span class="nm"><b>@IM</b><span>IT · Texas, USA</span></span>
+    </a>
+    <div class="lang" id="lang">
+      <button data-lang="ko" class="on">한국어</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <span class="eyebrow">&#10022; <span data-i18n="eyebrow">Web &amp; Software · Texas, USA</span></span>
+      <h1 data-i18n="h1">정성껏 만든 <em>웹사이트</em>들</h1>
+      <p data-i18n="sub">@IM이 제작한 작업물을 두 갈래로 모았습니다. 보고 싶은 쪽을 선택하세요.</p>
+    </div>
+
+    <div class="doors">
+      <a class="door business" href="business/">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></div>
+        <span class="tag" data-i18n="bizTag">Business</span>
+        <h2 data-i18n="bizTitle">비즈니스</h2>
+        <p data-i18n="bizDesc">기업 · 브랜드 · 스토어를 위한 홈페이지</p>
+        <ul class="feats">
+          <li data-i18n="bizF1">기업 사이트</li><li data-i18n="bizF2">랜딩 페이지</li><li data-i18n="bizF3">브랜딩</li>
+        </ul>
+        <div class="foot">
+          <span class="count" data-i18n="bizCount">준비 중</span>
+          <span class="go"><span data-i18n="enter">보러가기</span> <span class="ar">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="door church" href="church/">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v6M9 5h6M5 22V11l7-4 7 4v11M5 22h14M10 22v-5h4v5"/></svg></div>
+        <span class="tag" data-i18n="chTag">Church</span>
+        <h2 data-i18n="chTitle">교회</h2>
+        <p data-i18n="chDesc">교회 · 선교단체를 위한 홈페이지</p>
+        <ul class="feats">
+          <li data-i18n="chF1">교회 홈페이지</li><li data-i18n="chF2">선교회</li><li data-i18n="chF3">무료 제작</li>
+        </ul>
+        <div class="foot">
+          <span class="count"><b>4</b> <span data-i18n="sites">사이트</span></span>
+          <span class="go"><span data-i18n="enter2">보러가기</span> <span class="ar">&rarr;</span></span>
+        </div>
+      </a>
+    </div>
+
+    <div class="strip" data-i18n="strip">Web &amp; Software · Texas, USA · 교회는 언제나 <b>무료 제작</b></div>
+  </div>
+</main>
+
+<footer class="wrap">
+  <div class="frow">
+    <span>@IM</span>
+    <span data-i18n="copyright">© 2025 @IM · Web &amp; Software · Texas, USA</span>
+  </div>
+</footer>
+
+<script>
+const T = {
+  ko:{
+    title:"@IM — Web & Software · Texas, USA",
+    eyebrow:"Web &amp; Software · Texas, USA",
+    h1:"정성껏 만든 <em>웹사이트</em>들",
+    sub:"@IM이 제작한 작업물을 두 갈래로 모았습니다. 보고 싶은 쪽을 선택하세요.",
+    bizTag:"Business", bizTitle:"비즈니스", bizDesc:"기업 · 브랜드 · 스토어를 위한 홈페이지",
+    bizF1:"기업 사이트", bizF2:"랜딩 페이지", bizF3:"브랜딩", bizCount:"준비 중",
+    chTag:"Church", chTitle:"교회", chDesc:"교회 · 선교단체를 위한 홈페이지",
+    chF1:"교회 홈페이지", chF2:"선교회", chF3:"무료 제작", sites:"사이트",
+    enter:"보러가기", enter2:"보러가기",
+    strip:"Web &amp; Software · Texas, USA · 교회는 언제나 <b>무료 제작</b>",
+    copyright:"© 2025 @IM · Web &amp; Software · Texas, USA"
+  },
+  en:{
+    title:"@IM — Web & Software · Texas, USA",
+    eyebrow:"Web &amp; Software · Texas, USA",
+    h1:"Websites, <em>crafted with care</em>",
+    sub:"A collection of work by @IM, in two tracks. Choose where you'd like to go.",
+    bizTag:"Business", bizTitle:"Business", bizDesc:"Sites for companies, brands & stores",
+    bizF1:"Company sites", bizF2:"Landing pages", bizF3:"Branding", bizCount:"Coming soon",
+    chTag:"Church", chTitle:"Church", chDesc:"Sites for churches & mission organizations",
+    chF1:"Church sites", chF2:"Missions", chF3:"Always free", sites:"sites",
+    enter:"Enter", enter2:"Enter",
+    strip:"Web &amp; Software · Texas, USA · Always <b>free</b> for churches",
+    copyright:"© 2025 @IM · Web & Software · Texas, USA"
+  }
+};
+function setLang(l){
+  const t=T[l]; document.documentElement.lang=l; document.title=t.title;
+  document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.getAttribute('data-i18n'); if(t[k]!==undefined) e.innerHTML=t[k];});
+  document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+}
+document.querySelectorAll('#lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+setLang('ko');
+</script>
+</body>
+</html>
