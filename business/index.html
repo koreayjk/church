@@ -7,18 +7,19 @@
 <meta name="description" content="@IM이 제작한 비즈니스 웹사이트 모음.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <style>
 :root{
-  --bg:#f4f7fb; --panel:#ffffff; --ink:#192231; --muted:#5d6878; --line:#e3e9f1;
-  --blue:#2f5fa8; --blue2:#27508f; --accent:#2f5fa8; --gold:#b9954c;
+  --bg:#f7f7f3; --panel:#ffffff; --ink:#15201b; --muted:#6b766f; --line:#e6e8e0;
+  --blue:#28508f; --blue2:#1f4070; --accent:#2f5fa8; --gold:#b9954c;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Hanken Grotesk',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden;
+body{font-family:'Pretendard','Hanken Grotesk','Noto Sans KR',system-ui,sans-serif;-webkit-font-smoothing:antialiased;background:var(--bg);color:var(--ink);line-height:1.6;word-break:keep-all;overflow-wrap:break-word;overflow-x:hidden;
   background-image:radial-gradient(760px 460px at 86% -6%,rgba(47,95,168,.12),transparent 60%),
                    radial-gradient(640px 460px at 4% 16%,rgba(47,95,168,.07),transparent 56%)}
-h1,h2,h3,.serif{font-family:'Fraunces',serif}
+h1,h2,h3,.serif{font-family:'Fraunces','Pretendard','Noto Sans KR',serif}
 a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
 .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
@@ -26,7 +27,7 @@ img{display:block;max-width:100%}
 header{position:sticky;top:0;z-index:50;background:rgba(244,247,251,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 26px;max-width:1180px;margin:0 auto}
 .brand{display:flex;align-items:center;gap:11px}
-.brand .mk{width:38px;height:38px;border-radius:11px;background:linear-gradient(140deg,var(--blue),var(--blue2));
+.brand .mk{width:38px;height:38px;border-radius:11px;background:var(--ink);
   display:grid;place-items:center;box-shadow:0 10px 22px -10px rgba(47,95,168,.6)}
 .brand .mk b{font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:#fff;letter-spacing:.4px}
 .brand .nm b{font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem}
@@ -38,7 +39,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:14px;paddi
 .lang{display:inline-flex;border:1px solid var(--line);border-radius:30px;padding:3px;background:var(--panel)}
 .lang button{border:none;background:transparent;color:var(--muted);font-family:'Hanken Grotesk',sans-serif;font-weight:700;
   font-size:.78rem;padding:7px 12px;border-radius:24px;cursor:pointer;transition:.2s}
-.lang button.on{background:var(--blue);color:#fff}
+.lang button.on{background:var(--ink);color:#fff}
 
 .hero{padding:78px 0 50px;text-align:center}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.72rem;letter-spacing:2.5px;text-transform:uppercase;
